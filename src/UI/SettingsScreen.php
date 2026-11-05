@@ -1,5 +1,7 @@
 <?php
 
+// Modified by HackIndex on 2026-11-05: security fixes. Fork of https://github.com/crgeary/wp-jamstack-deployments
+
 namespace Crgeary\JAMstackDeployments\UI;
 
 class SettingsScreen

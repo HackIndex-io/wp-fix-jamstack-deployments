@@ -1,12 +1,16 @@
 <?php
 
 /**
- * Plugin Name: JAMstack Deployments
+ * Plugin Name: JAMstack Deployments (HackIndex Patched)
  * Plugin URI: https://github.com/crgeary/wp-jamstack-deployments
- * Description: A WordPress plugin for JAMstack deployments on Netlify (and other platforms).
+ * Description: A WordPress plugin for JAMstack deployments on Netlify (and other platforms). (HackIndex Patched)
  * Author: Christopher Geary
  * Author URI: https://crgeary.com
- * Version: 1.1.1
+ * Version: 1.1.2
+ * License: GPL-3.0
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * Modified by HackIndex on 2026-11-05: security fixes. Fork of https://github.com/crgeary/wp-jamstack-deployments
  */
 
 if (!defined('ABSPATH')) {
