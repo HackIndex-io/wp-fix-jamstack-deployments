@@ -39,7 +39,7 @@ class SettingsScreen
     {
         ?><div class="wrap">
 
-            <h2><?= get_admin_page_title(); ?></h2>
+            <h2><?= esc_html(get_admin_page_title()); ?></h2>
             
             <form method="post" action="<?= esc_url(admin_url('options.php')); ?>">
                 <?php

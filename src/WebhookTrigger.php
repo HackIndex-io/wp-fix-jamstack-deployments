@@ -203,7 +203,7 @@ class WebhookTrigger
         if (!empty($image)) {
             $bar->add_node([
                 'id' => 'wp-jamstack-deployments-netlify-badge',
-                'title' => sprintf('<img src="%s" alt />', $image),
+                'title' => sprintf('<img src="%s" alt />', esc_url($image)),
                 'href' => empty($option['deployment_badge_link_url']) ? 'javascript:void(0)' : $option['deployment_badge_link_url'],
                 'parent' => 'top-secondary',
                 'meta' => [

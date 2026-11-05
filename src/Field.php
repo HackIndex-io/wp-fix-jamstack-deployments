@@ -29,7 +29,7 @@ class Field
         ?><div>
             <select name="<?= esc_attr($args['name']); ?>">
                 <?php foreach ($args['choices'] as $k => $v) : ?>
-                    <option value="<?= esc_attr($k); ?>" <?php selected($k, $args['value']); ?>><?= $v; ?></option>
+                    <option value="<?= esc_attr($k); ?>" <?php selected($k, $args['value']); ?>><?= esc_html($v); ?></option>
                 <?php endforeach; ?>
             </select>
             <?= !empty($args['description']) ? "<p class=\"description\">{$args['description']}</p>" : ''; ?>
@@ -47,7 +47,7 @@ class Field
         $args['value'] = is_array($args['value']) ? $args['value'] : [$args['value']];
 
         ?><fieldset>
-            <legend class="screen-reader-text"><?= $args['legend']; ?></legend>
+            <legend class="screen-reader-text"><?= esc_html($args['legend']); ?></legend>
             <?php foreach ($args['choices'] as $k => $v) : ?>
                 <label>
                     <input type="checkbox"
@@ -55,7 +55,7 @@ class Field
                         value="<?= esc_attr($k); ?>"
                         <?php checked(true, in_array($k, $args['value'], true)); ?>
                     />
-                    <?= "$v<span class='screen-reader-text'>, the key/name is </span> <code>{$k}</code>"; ?>
+                    <?= esc_html($v) . "<span class='screen-reader-text'>, the key/name is </span> <code>" . esc_html($k) . "</code>"; ?>
                 </label><br />
             <?php endforeach; ?>
             <?= !empty($args['description']) ? "<p class=\"description\">{$args['description']}</p>" : ''; ?>
