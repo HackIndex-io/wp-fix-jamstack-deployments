@@ -13,7 +13,7 @@ class Field
     public static function url($args = [])
     {
         ?><div>
-            <input type="url" class="regular-text" name="<?= esc_attr($args['name']); ?>" value="<?= esc_url($args['value']); ?>">
+            <input type="url" class="regular-text" name="<?= esc_attr($args['name']); ?>" value="<?= esc_url((string) $args['value']); ?>">
             <?= !empty($args['description']) ? "<p class=\"description\">{$args['description']}</p>" : ''; ?>
         </div><?php
     }

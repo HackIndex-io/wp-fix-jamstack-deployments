@@ -119,7 +119,7 @@ class WebhookTrigger
     protected static function canFireForTaxonomy($id, $tax_id, $tax_slug)
     {
         $option = jamstack_deployments_get_options();
-        $taxonomies = apply_filters('jamstack_deployments_taxonomies', $option['webhook_taxonomies'] ?: [], $id, $tax_id);
+        $taxonomies = apply_filters('jamstack_deployments_taxonomies', !empty($option['webhook_taxonomies']) ? $option['webhook_taxonomies'] : [], $id, $tax_id);
 
         return in_array($tax_slug, $taxonomies, true);
     }
